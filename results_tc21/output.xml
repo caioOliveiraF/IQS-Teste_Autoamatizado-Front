@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.1 on win32)" generated="2024-02-10T14:16:16.329809" rpa="false" schemaversion="5">
+<suite id="s1" name="Servico teste" source="C:\Users\caiojo\Desktop\Estudos\IQS\IQS Teste_Automatizado_Front\Servico_teste.robot">
+<test id="s1-t1" name="TC 21 Editar serviço" line="162">
+<kw name="Run Keywords" owner="BuiltIn" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-02-10T14:16:16.468302" level="INFO">Opening browser 'chrome' to base url 'http://sistemas.t2mlab.com:3006/'.</msg>
+<arg>url=${URL}</arg>
+<arg>browser=${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-02-10T14:16:16.468302" elapsed="1.486926"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-02-10T14:16:17.955228" elapsed="0.138628"/>
+</kw>
+<arg>Open Browser</arg>
+<arg>url=${URL}</arg>
+<arg>browser=${BROWSER}</arg>
+<arg>AND</arg>
+<arg>Maximize Browser Window</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<status status="PASS" start="2024-02-10T14:16:16.467301" elapsed="1.626555"/>
+</kw>
+<kw name="Realizar Login">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-10T14:16:18.095854" level="INFO">Typing text 'SIFigueiredo' into text field 'xpath://input[@aria-label='Email']'.</msg>
+<arg>${LOGIN_PAGE.EmailInput}</arg>
+<arg>${GESTOR_VALIDO}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-10T14:16:18.094856" elapsed="0.085637"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-10T14:16:18.180493" level="INFO">Typing text '123' into text field 'xpath://input[@aria-label='Senha']'.</msg>
+<arg>${LOGIN_PAGE.SenhaInput}</arg>
+<arg>${SENHA}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-10T14:16:18.180493" elapsed="0.051998"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-10T14:16:18.232491" level="INFO">Clicking element 'xpath://button[@role='button']'.</msg>
+<arg>${LOGIN_PAGE.BotãoLogin}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-10T14:16:18.232491" elapsed="0.037563"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-10T14:16:19.270254" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-10T14:16:18.270054" elapsed="1.000200"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-10T14:16:19.270254" level="INFO">Clicking element '//div[@class='container']/div[@class='row']/div[.='SCSistema de Competência']'.</msg>
+<arg>${LOGIN_PAGE.BotãoCompetencia}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-10T14:16:19.270254" elapsed="0.038566"/>
+</kw>
+<status status="PASS" start="2024-02-10T14:16:18.094856" elapsed="1.214964"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-10T14:16:19.309820" level="INFO">Clicking element '//button[.='Serviço']'.</msg>
+<arg>//button[.='Serviço']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-10T14:16:19.309820" elapsed="0.037996"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//button[.='Cadastrar Serviço']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-02-10T14:16:19.348816" elapsed="0.016081"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-10T14:16:19.364897" level="INFO">Clicking element '//button[.='Buscar Serviço']'.</msg>
+<arg>//button[.='Buscar Serviço']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-10T14:16:19.364897" elapsed="0.039588"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css:tbody &gt; tr:nth-of-type(1) svg:nth-of-type(1)</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-02-10T14:16:19.404485" elapsed="0.223025"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-10T14:16:19.628510" level="INFO">Clicking element 'css:tbody &gt; tr:nth-of-type(1) svg:nth-of-type(1)'.</msg>
+<arg>css:tbody &gt; tr:nth-of-type(1) svg:nth-of-type(1)</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-10T14:16:19.628510" elapsed="0.037551"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//span[.='Detalhar Serviço']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-02-10T14:16:19.667055" elapsed="0.015021"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-10T14:16:19.683076" level="INFO">Clicking element 'css:.container &gt; div:nth-of-type(2) [stroke='currentColor']'.</msg>
+<arg>css:.container &gt; div:nth-of-type(2) [stroke='currentColor']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-10T14:16:19.683076" elapsed="0.031910"/>
+</kw>
+<kw name="Gerar nome do serviço">
+<kw name="Get Current Date" owner="DateTime">
+<msg time="2024-02-10T14:16:19.715989" level="INFO">${data} = 10/02/2024 14:16:19</msg>
+<var>${data}</var>
+<arg>result_format=%d/%m/%Y %H:%M:%S</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="PASS" start="2024-02-10T14:16:19.715989" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-02-10T14:16:19.715989" level="INFO">${NOMESERVICO} = Serviço 10/02/2024 14:16:19</msg>
+<var>${NOMESERVICO}</var>
+<arg>Serviço ${data}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-02-10T14:16:19.715989" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-02-10T14:16:19.715989" level="INFO">${DESCRICAOSERVICO} = Descrição Serviço 10/02/2024 14:16:19</msg>
+<var>${DESCRICAOSERVICO}</var>
+<arg>Descrição Serviço ${data}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-02-10T14:16:19.715989" elapsed="0.000997"/>
+</kw>
+<kw name="Set Test Variable" owner="BuiltIn">
+<msg time="2024-02-10T14:16:19.716986" level="INFO">${NOMESERVICO} = Serviço 10/02/2024 14:16:19</msg>
+<arg>${NOMESERVICO}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<status status="PASS" start="2024-02-10T14:16:19.716986" elapsed="0.000000"/>
+</kw>
+<kw name="Set Test Variable" owner="BuiltIn">
+<msg time="2024-02-10T14:16:19.716986" level="INFO">${DESCRICAOSERVICO} = Descrição Serviço 10/02/2024 14:16:19</msg>
+<arg>${DESCRICAOSERVICO}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<status status="PASS" start="2024-02-10T14:16:19.716986" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-02-10T14:16:19.714986" elapsed="0.002000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-10T14:16:20.717351" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-10T14:16:19.716986" elapsed="1.000365"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-10T14:16:20.717351" level="INFO">Typing text 'Serviço 10/02/2024 14:16:19' into text field 'css:[maxlength='30']'.</msg>
+<arg>css:[maxlength='30']</arg>
+<arg>${NOMESERVICO}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-10T14:16:20.717351" elapsed="0.119633"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-10T14:16:20.837990" level="INFO">Clicking element 'css:.container &gt; div:nth-of-type(4) [stroke='currentColor']'.</msg>
+<arg>css:.container &gt; div:nth-of-type(4) [stroke='currentColor']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-10T14:16:20.837990" elapsed="0.026083"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-10T14:16:21.864308" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-10T14:16:20.864073" elapsed="1.000235"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-10T14:16:21.864811" level="INFO">Typing text 'Descrição Serviço 10/02/2024 14:16:19' into text field 'css:[maxlength='60']'.</msg>
+<arg>css:[maxlength='60']</arg>
+<arg>${DESCRICAOSERVICO}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-10T14:16:21.864811" elapsed="0.141917"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-10T14:16:22.006728" level="INFO">Clicking element '//button[@class='botao-default btn btn-var(--verde-primario)']'.</msg>
+<arg>//button[@class='botao-default btn btn-var(--verde-primario)']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-10T14:16:22.006728" elapsed="0.038988"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//button[.='Confirmar']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-02-10T14:16:22.046717" elapsed="0.014913"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-10T14:16:22.061630" level="INFO">Clicking element '//button[.='Confirmar']'.</msg>
+<arg>//button[.='Confirmar']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-10T14:16:22.061630" elapsed="0.030167"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//div[@class='Toastify__toast-body']/div[.='Alterações salvas!']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-02-10T14:16:22.092797" elapsed="0.429995"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-02-10T14:16:22.523792" elapsed="2.069687"/>
+</kw>
+<tag>FLUXO-POSITIVO21</tag>
+<status status="PASS" start="2024-02-10T14:16:16.466302" elapsed="8.127177"/>
+</test>
+<status status="PASS" start="2024-02-10T14:16:16.330735" elapsed="8.264648"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">FLUXO-POSITIVO21</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Servico teste">Servico teste</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.1 on win32)" generated="2024-02-09T14:29:31.608628" rpa="false" schemaversion="5">
+<suite id="s1" name="Login testes" source="C:\Users\caiojo\Desktop\Estudos\IQS\IQS Teste_Automatizado_Front\Login_testes.robot">
+<test id="s1-t1" name="TC 01 Fazer Login com usuario valido" line="52">
+<kw name="Run Keywords" owner="BuiltIn" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-02-09T14:29:31.749941" level="INFO">Opening browser 'chrome' to base url 'http://sistemas.t2mlab.com:3009/'.</msg>
+<arg>url=${URL}</arg>
+<arg>browser=${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-02-09T14:29:31.749941" elapsed="1.528736"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-02-09T14:29:33.278677" elapsed="0.130146"/>
+</kw>
+<arg>Open Browser</arg>
+<arg>url=${URL}</arg>
+<arg>browser=${BROWSER}</arg>
+<arg>AND</arg>
+<arg>Maximize Browser Window</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<status status="PASS" start="2024-02-09T14:29:31.748941" elapsed="1.659882"/>
+</kw>
+<kw name="Realizar Login com ${USUARIO_VALIDO} e ${SENHA}" source_name="Realizar Login com ${usuario} e ${senha}">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-09T14:29:33.411824" level="INFO">Typing text 'BLCarvalho' into text field 'xpath://input[@aria-label='Email']'.</msg>
+<arg>${LOGIN_PAGE.EmailInput}</arg>
+<arg>${usuario}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-09T14:29:33.410832" elapsed="0.089398"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-09T14:29:33.501228" level="INFO">Typing text '123' into text field 'xpath://input[@aria-label='Senha']'.</msg>
+<arg>${LOGIN_PAGE.SenhaInput}</arg>
+<arg>${senha}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-09T14:29:33.500230" elapsed="0.057606"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-09T14:29:33.558836" level="INFO">Clicking element 'xpath://button[@role='button']'.</msg>
+<arg>${LOGIN_PAGE.BotãoLogin}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-09T14:29:33.557836" elapsed="0.040081"/>
+</kw>
+<status status="PASS" start="2024-02-09T14:29:33.409826" elapsed="0.188091"/>
+</kw>
+<kw name="Verificação de login">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-09T14:29:34.599092" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-09T14:29:33.598918" elapsed="1.000174"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-09T14:29:34.599092" level="INFO">Clicking element 'xpath://div[@title='Sistema Comunidade Prática']'.</msg>
+<arg>${LOGIN_PAGE.BotãoComunidade}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-09T14:29:34.599092" elapsed="0.048573"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-09T14:29:35.648062" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-09T14:29:34.647665" elapsed="1.000397"/>
+</kw>
+<kw name="Get Location" owner="SeleniumLibrary">
+<msg time="2024-02-09T14:29:35.652074" level="INFO">${url} = http://sistemas.t2mlab.com:3009/comunidades</msg>
+<var>${url}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="PASS" start="2024-02-09T14:29:35.648062" elapsed="0.004012"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${url}</arg>
+<arg>/comunidades</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2024-02-09T14:29:35.652074" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-02-09T14:29:33.598918" elapsed="2.053156"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-02-09T14:29:35.652074" elapsed="2.075952"/>
+</kw>
+<tag>FLUXO-POSITIVO01</tag>
+<status status="PASS" start="2024-02-09T14:29:31.746939" elapsed="5.981087"/>
+</test>
+<status status="PASS" start="2024-02-09T14:29:31.609598" elapsed="6.119419"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">FLUXO-POSITIVO01</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Login testes">Login testes</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
