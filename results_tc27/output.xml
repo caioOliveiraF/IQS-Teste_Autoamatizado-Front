@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.1 on win32)" generated="2024-02-11T13:31:12.973528" rpa="false" schemaversion="5">
+<suite id="s1" name="Empresa testes" source="C:\Users\caiojo\Desktop\Estudos\IQS\IQS Teste_Automatizado_Front\Empresa_testes.robot">
+<test id="s1-t1" name="TC 27 Cadastrar empresa" line="168">
+<kw name="Run Keywords" owner="BuiltIn" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-02-11T13:31:13.446952" level="INFO">Opening browser 'chrome' to base url 'http://sistemas.t2mlab.com:3006/'.</msg>
+<arg>url=${URL}</arg>
+<arg>browser=${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-02-11T13:31:13.446952" elapsed="1.475465"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-02-11T13:31:14.923418" elapsed="0.139983"/>
+</kw>
+<arg>Open Browser</arg>
+<arg>url=${URL}</arg>
+<arg>browser=${BROWSER}</arg>
+<arg>AND</arg>
+<arg>Maximize Browser Window</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<status status="PASS" start="2024-02-11T13:31:13.445951" elapsed="1.617450"/>
+</kw>
+<kw name="Realizar Login">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-11T13:31:15.064402" level="INFO">Typing text 'SIFigueiredo' into text field 'xpath://input[@aria-label='Email']'.</msg>
+<arg>${LOGIN_PAGE.EmailInput}</arg>
+<arg>${GESTOR_VALIDO}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-11T13:31:15.064402" elapsed="0.103309"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-11T13:31:15.168711" level="INFO">Typing text '123' into text field 'xpath://input[@aria-label='Senha']'.</msg>
+<arg>${LOGIN_PAGE.SenhaInput}</arg>
+<arg>${SENHA}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-11T13:31:15.167711" elapsed="0.064143"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-11T13:31:15.232854" level="INFO">Clicking element 'xpath://button[@role='button']'.</msg>
+<arg>${LOGIN_PAGE.BotãoLogin}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-11T13:31:15.231854" elapsed="0.041275"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-11T13:31:16.273599" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-11T13:31:15.273129" elapsed="1.000470"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-11T13:31:16.273599" level="INFO">Clicking element '//div[@class='container']/div[@class='row']/div[.='SCSistema de Competência']'.</msg>
+<arg>${LOGIN_PAGE.BotãoCompetencia}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-11T13:31:16.273599" elapsed="0.045960"/>
+</kw>
+<status status="PASS" start="2024-02-11T13:31:15.063401" elapsed="1.256158"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-11T13:31:16.320652" level="INFO">Clicking element '//button[.='Empresa']'.</msg>
+<arg>//button[.='Empresa']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-11T13:31:16.320652" elapsed="0.044935"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//button[.='Cadastrar Empresa']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-02-11T13:31:16.366584" elapsed="0.019208"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-11T13:31:16.386793" level="INFO">Clicking element '//button[.='Buscar Empresa']'.</msg>
+<arg>//button[.='Buscar Empresa']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-11T13:31:16.386793" elapsed="0.054817"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//span[.='Buscar Empresa']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-02-11T13:31:16.441610" elapsed="0.067666"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-11T13:31:16.509781" level="INFO">Clicking element '//select[@class='select-per-page form-select']'.</msg>
+<arg>//select[@class='select-per-page form-select']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-11T13:31:16.509276" elapsed="0.215573"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//option[.='100']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-02-11T13:31:16.725851" elapsed="0.084691"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-11T13:31:16.811550" level="INFO">Clicking element '//option[.='100']'.</msg>
+<arg>//option[.='100']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-11T13:31:16.811550" elapsed="0.150112"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-11T13:31:16.962662" level="INFO">Typing text 'EmpresaAuto1234' into text field '//input[@class='form-control']'.</msg>
+<arg>//input[@class='form-control']</arg>
+<arg>${NOMEEMPRESAREP}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-11T13:31:16.962662" elapsed="0.445328"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css:[color='var(--preto-primario)'][viewBox='0 0 16 16']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-02-11T13:31:17.409498" elapsed="0.068513"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-11T13:31:17.478011" level="INFO">Clicking element 'css:[color='var(--preto-primario)'][viewBox='0 0 16 16']'.</msg>
+<arg>css:[color='var(--preto-primario)'][viewBox='0 0 16 16']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-11T13:31:17.478011" elapsed="0.182569"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//span[.='Detalhar Empresa']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-02-11T13:31:17.661586" elapsed="0.014069"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-02-11T13:31:17.676654" elapsed="2.117802"/>
+</kw>
+<tag>FLUXO-POSITIVO27</tag>
+<status status="PASS" start="2024-02-11T13:31:13.444951" elapsed="6.349505"/>
+</test>
+<status status="PASS" start="2024-02-11T13:31:12.975559" elapsed="6.819899"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">FLUXO-POSITIVO27</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Empresa testes">Empresa testes</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

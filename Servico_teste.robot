@@ -20,31 +20,12 @@ ${URL}        http://sistemas.t2mlab.com:3006/
 ${GESTOR_VALIDO}         SIFigueiredo
 ${SENHA}                 123
 
-### Nome Teste e Descrição ###
-
-${NOMETESTEREP}    TesteAuto1234
-
-### Colaboradores ###
-
-${COLABORADOR}    gestor
-
-### Nome da empresa ###
-
-${NOMEEMPRESAREP}    EmpresaAuto1234
-
 #### Nome do serviço ###
 
 ${NOMESERVICO}
 ${DESCRICAOSERVICO}
 ${NOMESERVICOREP}    ServiçoAuto1234
 ${DESCRICAOSERVICOREP}    DescriçãoServiçoAuto1234
-
-#### Nome da Empresa ###
-
-${NOMEEMPRESA}
-${SETOREMPRESA}
-${NOMEEMPRESAREP}    EmpresaAuto1234
-${SETOREMPRESAREP}    SetorAuto1234
 
 ### Pagina Login ###
 
@@ -64,37 +45,12 @@ Realizar Login
     Sleep    1s
     Click Element     ${LOGIN_PAGE.BotãoCompetencia}
 
-Gerar nome do teste
-    ${data}    Get Current Date    result_format=%d/%m/%Y %H:%M:%S
-    ${NOMETESTE}    Set Variable    Teste ${data}
-    ${NOMEDESCRICAO}    Set Variable    Descrição ${data}
-    Set Test Variable    ${NOMETESTE}
-    Set Test Variable    ${NOMEDESCRICAO}
-
 Gerar nome do serviço
     ${data}    Get Current Date    result_format=%d/%m/%Y %H:%M:%S
     ${NOMESERVICO}    Set Variable    Serviço ${data}
     ${DESCRICAOSERVICO}    Set Variable    Descrição Serviço ${data}
     Set Test Variable    ${NOMESERVICO}
     Set Test Variable    ${DESCRICAOSERVICO}
-
-Cadastrar competencia
-    Realizar Login
-    
-    Click Element    //button[.='Competência']
-    
-    Wait Until Element Is Visible    //button[.='Cadastrar Competência']
-    Click Element    //button[.='Cadastrar Competência']
-
-    Wait Until Element Is Visible    //input[@id='formBasicEmail']
-    Gerar nome do teste
-    Sleep    1s
-    Input Text    //input[@id='formBasicEmail']    ${NOMETESTE}
-    Input Text    //textarea[@id='formBasicEmail']    ${NOMEDESCRICAO}
-    Click Element    //button[@class='botao-default btn btn-var(--verde-primario)']
-
-    Wait Until Element Is Visible    //button[.='Confirmar']
-    Click Element    //button[.='Confirmar']
 
 Cadastrar serviço
     Realizar Login
